@@ -33,6 +33,14 @@ nav {
     letter-spacing: 2px;
 }
 
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+}
+
 /* NAV LINKS */
 .nav-links {
     list-style: none;
@@ -71,6 +79,23 @@ nav {
 }
 
 /* HERO SECTION */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+}
+
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(10,31,68,0.7), rgba(10,31,68,0.7)),
@@ -138,6 +163,25 @@ nav {
 
 
 /* EVENTS SECTION */
+.events-controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: 2px solid var(--primary-color);
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
 .filter-tabs {
     display: flex;
@@ -192,7 +236,7 @@ nav {
 /* GRID LAYOUT */
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -262,6 +306,13 @@ nav {
     color: #666;
 }
 
+.event-card {
+    transition: opacity 0.3s ease;
+}
+
+
+
+
 /* CARD BUTTON */
 .card-btn {
     text-decoration: none;
@@ -301,6 +352,13 @@ nav {
     }
 }
 
+.no-results {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    color: var(--text-color);
+    display: none;
+}
 
 
 .testimonials-section {
@@ -436,6 +494,17 @@ nav {
     font-size: 0.9rem;
     color: #94a3b8;
 }
+
+@media (max-width: 768px) {
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+}
+
 
 
 .footer-socials a:nth-child(1):hover { background: #1877f2; } /* Facebook */

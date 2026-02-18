@@ -46,13 +46,25 @@
 <!-- UPCOMING EVENTS SECTION -->
 <section class="events-section">
     <h2 class="section-title">UPCOMING EVENTS</h2>
+
+    <div class="events-controls">
+
+     <input 
+        type="text" 
+        id="event-search" 
+        placeholder="Search events..."
+        class="search-input"
+      />
+
+    </div>
+
     
     <div class="filter-tabs">
-        <button class="tab active">All</button>
-        <button class="tab">Tech</button>
-        <button class="tab">Sports</button>
-        <button class="tab">Culture</button>
-        <button class="tab">Workshops</button>
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter ="tech">Tech</button>
+        <button class="tab" data-filter ="sports">Sports</button>
+        <button class="tab" data-filter ="culture">Culture</button>
+        <button class="tab" data-filter ="workshop">Workshops</button>
     </div>
 
     <div class="events-grid">
@@ -65,7 +77,7 @@
     <div class="events-grid">
 
         <!-- EVENT CARD 1 -->
-        <div class="event-card">
+        <div class="event-card" data-category="tech">
             <div class="event-image">
                 <img src="images/event1.jpg" alt="Tech Event">
                 <span class="category">Tech</span>
@@ -82,7 +94,7 @@
         </div>
 
         <!-- EVENT CARD 2 -->
-        <div class="event-card">
+        <div class="event-card" data-category="culture" >
             <div class="event-image">
                 <img src="images/event2.jpg" alt="Music Festival">
                 <span class="category">Music</span>
@@ -99,7 +111,7 @@
         </div>
 
         <!-- EVENT CARD 3 -->
-        <div class="event-card">
+        <div class="event-card" data-category="sports">
             <div class="event-image">
                 <img src="images/event3.jpg" alt="Sports Day">
                 <span class="category">Sports</span>
@@ -116,6 +128,11 @@
         </div>
 
     </div>
+
+    <div id="no-results" class="no-results">
+    No events found 😕
+     </div>
+
 </section>
 
 
@@ -224,7 +241,6 @@
 </footer>
 
 <script src="my.js"></script>
-
 
 </body>
 </html>
