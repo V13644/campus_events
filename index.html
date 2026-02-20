@@ -77,7 +77,12 @@
     <div class="events-grid">
 
         <!-- EVENT CARD 1 -->
-        <div class="event-card" data-category="tech">
+        <div class="event-card" 
+            data-category="tech"
+            data-title="Tech Innovation Summit"
+            data-date="March 15, 2026"
+            data-description="Join top developers and innovators for a day of networking and future tech discussions."
+            data-image="images/event1.jpg">
             <div class="event-image">
                 <img src="images/event1.jpg" alt="Tech Event">
                 <span class="category">Tech</span>
@@ -94,7 +99,12 @@
         </div>
 
         <!-- EVENT CARD 2 -->
-        <div class="event-card" data-category="culture" >
+        <div class="event-card" 
+              data-category="culture"
+              data-title="Campus Music Fest"
+              data-date="April 2, 2026"
+              data-description="Experience live performances from campus artists and special guest performers."
+              data-image="images/event2.jpg">
             <div class="event-image">
                 <img src="images/event2.jpg" alt="Music Festival">
                 <span class="category">Music</span>
@@ -111,7 +121,12 @@
         </div>
 
         <!-- EVENT CARD 3 -->
-        <div class="event-card" data-category="sports">
+        <div class="event-card" 
+               data-category="sports"
+               data-title="Annual Sports Day"
+               data-date="May 10, 2026"
+               data-description="Compete, cheer, and celebrate athletic excellence across departments."
+               data-image="images/event3.jpg" alt ="Sports Day">
             <div class="event-image">
                 <img src="images/event3.jpg" alt="Sports Day">
                 <span class="category">Sports</span>
@@ -134,7 +149,32 @@
      </div>
 
 </section>
+<section class="submit-event-section">
 
+    <h2 class="section-title">Submit an Event</h2>
+
+    <form id="submit-event-form" class="submit-event-form">
+
+        <input type="text" id="event-title" placeholder="Event Title" required>
+
+        <select id="event-category" required>
+            <option value="">Select Category</option>
+            <option value="tech">Tech</option>
+            <option value="sports">Sports</option>
+            <option value="culture">Culture</option>
+        </select>
+
+        <input type="date" id="event-date" required>
+
+        <textarea id="event-description" placeholder="Event Description" required></textarea>
+
+        <input type="text" id="event-image" placeholder="Image URL (optional)">
+
+        <button type="submit">Add Event</button>
+
+    </form>
+
+</section>
 
 <!--testimonials -section-->
 <section class="testimonials-section">
@@ -239,6 +279,34 @@
     </div>
 
 </footer>
+<div class="event-modal" id="event-modal">
+    <div class="modal-content">
+
+        <span class="close-modal" id="close-modal">&times;</span>
+
+        <img id="modal-image" src="" alt="Event Image">
+
+        <h3 id="modal-title"></h3>
+
+        <p id="modal-date"></p>
+
+        <p id="modal-description"></p>
+
+        <button class="register-btn" id="register-btn">
+            Register Now
+        </button>
+
+        <!--Registaration form -->
+            <form id ="registration-form" class="registration-form">
+                <h4>Event Registration</h4>
+                <form id="reg-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+
+    </div>
+</div>
 
 <script src="my.js"></script>
 
